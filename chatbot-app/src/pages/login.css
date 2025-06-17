@@ -1,0 +1,201 @@
+.login-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.login-left-panel {
+  flex: 1;
+  position: relative;
+  background: linear-gradient(135deg, #4b7bec, #a55eea);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.login-left-panel::before,
+.login-left-panel::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+  filter: blur(80px);
+  opacity: 0.6;
+}
+
+.login-left-panel::before {
+  width: 200px;
+  height: 200px;
+  background: #a55eea;
+  top: 10%;
+  left: 10%;
+}
+
+.login-left-panel::after {
+  width: 250px;
+  height: 250px;
+  background: #4b7bec;
+  bottom: 15%;
+  right: 5%;
+}
+
+.login-illustration {
+  width: 80%;
+  max-width: 400px;
+  z-index: 1;
+}
+
+.login-right-panel {
+  flex: 1;
+  background-color: var(--body-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glass-card {
+  width: 400px;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  color: var(--text);
+}
+
+.glass-card h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.glass-card p {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.login-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: var(--input-bg);
+  color: var(--text);
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background: #4b7bec;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 1rem;
+}
+
+.login-button:hover {
+  background: #3867d6;
+}
+
+.toggle-password {
+  font-size: 12px;
+  color: #ccc;
+  cursor: pointer;
+  float: right;
+  margin-top: -12px;
+  margin-bottom: 1rem;
+}
+
+.login-error {
+  color: #ff6b6b;
+  font-size: 14px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.social-login {
+  margin-top: 2rem;
+}
+
+.social-text {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.google-button,
+.github-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  color: var(--text);
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.google-button:hover,
+.github-button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.google-button img,
+.github-button img {
+  width: 18px;
+  height: 18px;
+}
+
+/* Dark mode support */
+body.dark {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark .glass-card {
+  background: rgba(30, 30, 30, 0.5);
+  color: #f0f0f0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chat-bubble {
+  word-wrap: break-word;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .login-left-panel {
+    display: none;
+  }
+
+  .login-right-panel {
+    flex: 1 1 100%;
+  }
+
+  .glass-card {
+    width: 90%;
+    padding: 2rem;
+  }
+}
